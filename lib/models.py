@@ -29,10 +29,10 @@ class Role(Base):
     
     def lead(self):
         hired = [a for a in self.auditions if a.hired]
-        return hired[0] if hired else "no one has been hired for this role"
+        return hired[0] if hired else "no actor has been hired for this role"
     def understudy(self):
         hired = [a for a in self.auditions if a.hired]
-        return hired[1] if len(hired) > 1 else "no one has been hired for understudy in this role"
+        return hired[1] if len(hired) > 1 else "no actor has been hired for understudy for this role"
     
 class Audition(Base):
     __tablename__ = 'auditions'
